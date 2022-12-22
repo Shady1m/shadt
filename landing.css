@@ -1,0 +1,236 @@
+
+body {
+    background: rgb(119, 218, 170);
+    background: linear-gradient(
+      0deg,
+      rgb(0, 0, 0) 0%,
+      rgba(8, 15, 1, 0.979) 100%
+    );
+    margin: 0;
+    font-family: "Merriweather", serif;
+    color: #fff;
+  }
+  
+  h1 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+  }
+  @media only screen and (min-width: 39em) {
+    h1 {
+      font-size: 5.6em;
+      margin: 2em 4rem 1em;
+      color: #a15105;
+    }
+  }
+  h2 {
+    border-bottom: 1px solid rgb(246, 253, 253);
+    font-family: "Oxygen", Sans-Serif;
+    font-size: 3em;
+    color:#a15105;
+  }
+  p {
+    line-height: 1.6em;
+    color: rgb(255, 255, 255);
+  }
+  /* ---- Layout Rules ---- */
+  main {
+    margin: 10vh 1em 10vh;
+  }
+  .header_2{
+    min-height: 40vh;
+    padding-top: 3em;
+    margin: 165px;;
+  }
+
+
+
+  .section {
+    position: relative;
+    min-height: 90vh;
+  }
+  /* ---- Module Rules ---- */
+  /* Navigation Styles*/
+  /***********************************  a button to make more sections  *****************************/
+  .navbar_5 #ton {
+    
+    top: 80%;
+    border-radius: 15% ;
+    width: 10em;
+    height: 2.8em;
+    outline: 0px;
+    border: 0px;
+    font-size: 18.5px;
+    font-weight: bold;
+    background-color: #a15105;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin:1px,2px;
+  }
+  .navbar_5 #ton:hover {
+    background-color: #e6e20f;
+    color:#000000;
+    padding: 0.2%;
+  }
+  .navbar_5 ul {
+    padding-left: 0;
+    margin: 5px;
+    text-align: inherit;
+  }
+  .navbar_5 li {
+    display: inline-block;
+  }
+  .navbar_5 .menu__link {
+    display: block;
+    padding: 0.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #a15105;
+  }
+  .navbar_5 .menu__link:hover {
+    background: #d8d405;
+    color: rgb(0, 0, 0);
+    transition: ease 0.2s all;
+    border-radius: 48%;
+    margin: auto;
+  }
+  /********************************** make a different style for active links ***********************/
+  .navbar_5 .active-link {
+    background:#a15105; 
+    border-radius: 30%;
+    color: rgb(0, 0, 0);
+    transition: ease 0.5s all;
+  }
+  /* Header Styles */
+  .header_1 {
+    background: rgb(2, 49, 5);
+    position: fixed;
+    top: -2.5%;
+    width: 98%;
+    z-index: 5px;
+    border-radius: 12%;
+    margin: 2%;
+  }
+  /* Footer Styles */
+  .footer_1 {
+    background: rgb(0, 0, 0);
+    padding: 1em;
+    color: rgb(255, 255, 255);
+  }
+  .footer_1 p {
+    color: rgb(0, 217, 255);
+  }
+  /* ---- Theme Rules ---- */
+  /* Landing Container Styles */
+  .landing__container {
+    padding: 5em;
+    text-align: left;
+    margin: 10%;
+  }
+  @media only screen and (min-width: 35em) {
+    .landing__container {
+      max-width: 45em;
+      padding: 4em;
+    }
+  }
+  section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+  /* Background Circles */
+  /* Note that background circles are created with psuedo elements before and after */
+  /* Circles appear to be random do to use of :nth-of-type psuedo class */
+  section:nth-of-type(odd) .landing__container::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 3%;
+    opacity: 0;
+    transition: ease 0.5s all;
+  }
+  section:nth-of-type(even) .landing__container::before {
+    content: "";
+    background: #fff9f9;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    position: absolute;
+    top: 15em;
+    right: 3em;
+    z-index: -5;
+    width: 9.8vh;
+    height: 9.8vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+  }
+  section:nth-of-type(3n) .landing__container::after {
+    content: "";
+    background: rgb(240, 213, 213);
+    background: linear-gradient(
+      0deg,
+      rgba(150, 121, 121, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+  }
+  section:nth-of-type(3n + 1) .landing__container::after {
+    content: "";
+    background: rgb(77, 77, 85);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+  }
+  /* ---- Theme State Rules ---- */
+  /* Section Active Styles */
+  /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+  section.your-active-class {
+    background: rgba(32, 129, 84, 0.418);
+    background: linear-gradient(
+      0deg,
+      rgba(22, 88, 57, 0.548) 0%,
+      rgb(0 0 0 / 45%) 100%
+    );
+    border-radius: 20px;
+}
+   #up1 {
+    border-radius: 28%;
+    background-color:#a15105;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 47px;
+    position: fixed;
+    top: 94%;
+    left: 45%;
+    bottom: -7px;
+    right: 15px;
+    cursor: pointer;
+    display: block;
+    /* display: none; */
+  }
